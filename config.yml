@@ -47,9 +47,9 @@ librarys:
   rtst: 
      count: 3
      #最大抽取数量
-     size: 20
+     size: 400
      #分块大小"
-     overlap: 0
+     overlap: 40
      #分块重叠长度
      model_path: "model/text2vec-large-chinese"
      #向量模型存储路径
@@ -88,7 +88,8 @@ llm_models:
      historymode: state
      #rwkv历史记录实现方式：state、string
   glm6b: 
-     path: "model/chatglm-6b-int4"
+     #path: "model/chatglm-6b"
+     path: "model/chatglm-6b-zhongke-ft"
      #glm模型位置"
      strategy: "cuda fp16"
      #cuda fp16	 所有glm模型 要直接跑在gpu上都可以使用这个参数
