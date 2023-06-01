@@ -75,7 +75,8 @@ librarys:
      #图数据库部署地址
      model_path: ""
      #信息抽取模型所在路径"
-llm_type: rwkv
+#llm_type: rwkv
+llm_type: glm6b
 #llm模型类型:glm6b、rwkv、llama、replitcode等，详见相关文件
 llm_models: 
   rwkv: 
@@ -90,6 +91,7 @@ llm_models:
   glm6b: 
      #path: "model/chatglm-6b"
      path: "model/chatglm-6b-zhongke-ft"
+     #path: "model/chatglm-6b-zhongke-pt-q8"
      #glm模型位置"
      strategy: "cuda fp16"
      #cuda fp16	 所有glm模型 要直接跑在gpu上都可以使用这个参数
@@ -99,7 +101,9 @@ llm_models:
      lora: ""
      #glm-lora模型位置
   llama: 
-     path: "model/stable-vicuna-13B.ggml.q4_2.bin"
+     #path: "model/stable-vicuna-13B.ggml.q4_2.bin"
+     #path: "model/BELLE-LLaMA-EXT-13B-zhongke-lora/ggml-model-f32.bin"
+     path: "model/BELLE-LLaMA-EXT-13B-zhongke-lora/ggml-model-f16.bin"
      #llama模型位置
      strategy: ""
      #llama模型参数 暂时不用
